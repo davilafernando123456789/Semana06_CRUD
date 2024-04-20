@@ -1,0 +1,33 @@
+﻿<Window x:Class="Semana06.ListarEmpleados"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Semana06"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="800"
+      Title="ListarEmpleado">
+
+    <Grid Margin="10,36,0,0" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" RenderTransformOrigin="0.683,0.474">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dataGridEmpleados" AutoGenerateColumns="False" Margin="10,45,10,10" Grid.Column="0" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="IdEmpleado" Binding="{Binding IdEmpleado}"/>
+                <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Cargo" Binding="{Binding Cargo}"/>
+                <DataGridTextColumn Header="Tratamiento" Binding="{Binding Tratamiento}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Eliminar Empleado" Click="EliminarEmpleado_Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="0"/>
+        <Button Content="Actualizar Empleado" Click="ActualizarEmpleado_Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Lista de empleados" HorizontalAlignment="Left" Margin="10,-21,0,0" VerticalAlignment="Top" Width="120" Grid.Column="0"/>
+        <Label Content="Detalles del empleado" HorizontalAlignment="Left" Margin="10,-21,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+    </Grid>
+</Window>

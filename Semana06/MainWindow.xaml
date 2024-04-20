@@ -1,0 +1,95 @@
+﻿<Window x:Class="Semana06.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Semana06"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <!-- Definición de las filas -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Etiquetas y cuadros de texto para cada campo -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Apellidos" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Apellidos, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Nombre" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Cargo" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Cargo, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Tratamiento" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Tratamiento, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha de Nacimiento" VerticalAlignment="Center"/>
+        <DatePicker Grid.Row="4" Grid.Column="1" SelectedDate="{Binding FechaNacimiento, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Fecha de Contratación" VerticalAlignment="Center"/>
+        <DatePicker Grid.Row="5" Grid.Column="1" SelectedDate="{Binding FechaContratacion, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Dirección" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Direccion, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Ciudad" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Ciudad, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Región" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Region, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Código Postal" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding CodPostal, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="10" Grid.Column="0" Text="Código Pais" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Pais, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="11" Grid.Column="0" Text="Código TelDomicilio" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding TelDomicilio, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="12" Grid.Column="0" Text="Código Extension" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding Extension, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+
+        <TextBlock Grid.Row="13" Grid.Column="0" Text="Notas" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="13" Grid.Column="1" Text="{Binding Notas, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="14" Grid.Column="0" Text="Jefe" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding Jefe, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="15" Grid.Column="0" Text="SueldoBasico" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="15" Grid.Column="1" Text="{Binding SueldoBasico, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <TextBlock Grid.Row="16" Grid.Column="0" Text="IdEmpleado" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="16" Grid.Column="1" Text="{Binding IdEmpleado, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <!-- Botón para guardar el empleado -->
+        <Button Grid.Row="17" Grid.Column="1" Content="Guardar" Click="Guardar_Click" HorizontalAlignment="Left" Margin="42,5,0,102" Width="403"/>
+        <Button Grid.Row="18" Grid.Column="1" Content="Listar empleados" Click="Guardar_Click_listar" HorizontalAlignment="Left" Margin="42,10,0,37" Width="403"/>
+    </Grid>
+</Window>
